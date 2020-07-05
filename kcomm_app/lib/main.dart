@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class Kcomm extends StatefulWidget {
   @override
   _KcommState createState() => _KcommState();
@@ -84,6 +85,9 @@ class _KcommState extends State<Kcomm> {
                     print("Conversation builder error occurred : " +
                         e.toString());
                   }
+                  setState(() {
+                    showLoader = false;
+                  });
                 },
               ),
             ],
@@ -101,4 +105,3 @@ class _KcommState extends State<Kcomm> {
     );
   }
 }
-
